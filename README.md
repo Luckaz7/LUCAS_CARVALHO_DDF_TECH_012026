@@ -57,7 +57,7 @@ Narrativa de Negócio: O projeto simula a fase pós-kickoff de uma implementaç�
 
         Organização do projeto utilizando Kanban para gestão de tarefas e prazos.
 
-        ![Planejamento Ágil](img/Planejamento Case Técnico(Trello).png)
+        ![Planejamento Ágil](img/planejamento_trello.png)
         • Legenda: Board Kanban estruturado para o ciclo de vida do projeto de Analytics Engineering.
 
 1. Seleção do Dataset
