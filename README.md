@@ -59,9 +59,10 @@ Aplicação de limpeza, tratamento de tipos e testes de qualidade via Python (No
 
 Enriquecimento da base original utilizando modelos de linguagem para categorização inteligente.
 
+Nota de Implementação (GenAI): Durante o enriquecimento, identifiquei respostas nulas da API devido aos filtros de segurança padrão (Safety Settings). Implementei um tratamento de exceções no pipeline Python para garantir a continuidade da ingestão, mapeando retornos inválidos como 'Outros' para manter a integridade do schema no carregamento para a Dadosfera.
+
 • [INSIRA O PRINT DO CÓDIGO DA API GENAI OU DO DATAFRAME COM A NOVA COLUNA AQUI]
 • Legenda: Extração de atributos de produtos via LLM para maior granularidade na análise de vendas.
-
 
 🚧 # Etapas em Desenvolvimento (Aguardando Ingestão)
 
