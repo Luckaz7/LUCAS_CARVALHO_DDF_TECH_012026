@@ -55,34 +55,34 @@ O foco é transformar dados brutos de e-commerce em ativos de inteligência de n
 
 # 📋 Itens do Case
 
-**0. Planejamento e Metodologia Ágil**
+##**0. Planejamento e Metodologia Ágil**
 
 Organização do projeto utilizando Kanban para gestão de tarefas e prazos.
 
 ![Planejamento Ágil](img/planejamento_trello.png)
 *Legenda: Board Kanban estruturado para o ciclo de vida do projeto de Analytics Engineering.*
 
-**1. Seleção do Dataset**
+##**1. Seleção do Dataset**
 
 Escolha de uma base real de e-commerce com mais de 100k registros para garantir a escalabilidade da solução.
 
 ![Dataset](img/dataset_kaggle.png)
 *Legenda: Dataset Olist selecionado pela sua complexidade relacional e volume de dados (+100k pedidos).*
 
-**2. Integração (Módulo Integrar)**
+##**2. Integração (Módulo Integrar)**
 
 Os dados foram ingeridos na plataforma Dadosfera utilizando o módulo Integrar, onde foram criados pipelines de upload para arquivos Parquet, garantindo a integridade dos tipos de dados e a documentação inicial dos metadados.
 
-• [INSIRA O PRINT]
-*Legenda: egistro do pipeline de ingestão no módulo Integrar. A imagem confirma o sucesso no upload dos arquivos em formato .parquet, garantindo a preservação dos schemas e a otimização do armazenamento no Data Lakehouse.*
+![Dataset](img/importacao_tabelas_sucesso.png)
+*Legenda: Registro do pipeline de ingestão no módulo Integrar. A imagem confirma o sucesso no upload dos arquivos em formato .parquet, garantindo a preservação dos schemas e a otimização do armazenamento no Data Lakehouse.*
 
-**3. Catalogação (Módulo Explorar)**
+##**3. Catalogação (Módulo Explorar)**
 
 Após a integração, os dados foram registrados como ativos oficiais no módulo Explorar da Dadosfera. Esta etapa foi fundamental para garantir a transparência da linhagem dos dados e a documentação das regras de negócio aplicadas.
 
 Durante a etapa de catalogação no módulo Explorar, identifiquei que a coluna original PRODUCT_CATEGORY_NAME apresentava 610 valores nulos (conforme evidenciado nos indicadores de qualidade da plataforma). Para garantir a integridade analítica, documentei a estrutura das tabelas conforme abaixo:
 
-Tabela: tb_olist_products_enriched (Dimensão de Produtos)
+###**Tabela: tb_olist_products_enriched (Dimensão de Produtos)**
 
 Esta tabela representa o maior ganho de governança do projeto, onde a Inteligência Artificial foi utilizada para tratar falhas de preenchimento da base original.
 
@@ -98,10 +98,10 @@ Esta tabela representa o maior ganho de governança do projeto, onde a Inteligê
 
 Nota: A documentação foi espelhada neste README para garantir a linhagem dos dados fora da camada de processamento.
 
-• [INSIRA O PRINT]
+![Dataset](img/tabela_products_genai.png)
 *Legenda: Análise de integridade e completude de dados. O painel de Data Quality evidencia a eficácia da estratégia de IA: enquanto a categoria original apresenta lacunas (610 nulos), a coluna enriquecida via GenAI entrega 100% de preenchimento, eliminando o ruído analítico.*
 
-Tabela: tb_olist_orders_processed (Tabela Fato)
+###**Tabela: tb_olist_orders_processed (Tabela Fato)**
 
 Centraliza as métricas de performance logística calculadas durante a fase de engenharia.
 
@@ -113,17 +113,17 @@ Centraliza as métricas de performance logística calculadas durante a fase de e
 
         SEASONALITY_FLAG: Classificação temporal dos pedidos (ex: Black Friday, Natal).
 
-• [INSIRA O PRINT]
+![Dataset](img/tb_orders.png)
 
-Tabela: tb_olist_customers (Dimensão de Clientes)
+###**Tabela: tb_olist_customers (Dimensão de Clientes)**
 
     Uso: Fornece a granularidade geográfica necessária para o mapeamento de calor das vendas por estado e cidade.
 
     Status de Qualidade: 100% de completude nos campos de localização.
 
-• [INSIRA O PRINT]
+![Dataset](img/tb_customers.png)
 
-**4. Processamento de Dados & Data Quality**
+##**4. Processamento de Dados & Data Quality**
 
 Aplicação de limpeza, tratamento de tipos e testes de qualidade via Python (Notebook anexo).
 
@@ -137,7 +137,7 @@ Verificação de Data Quality após correção:
 ![Processamento e Data Quality](img/teste_qualidade_dados_silver_pedidos.png)
 *Legenda: Nova auditoria de dados via Python(Pandera) corrigindo as falhas de integridade encontrada nos dados.*
 
-**5. Inteligência de Dados(GenAI)**
+##**5. Inteligência de Dados(GenAI)**
 
 Enriquecimento da base original utilizando modelos de linguagem para categorização inteligente.
 
