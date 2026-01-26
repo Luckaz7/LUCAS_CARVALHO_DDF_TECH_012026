@@ -7,7 +7,7 @@ Dataset: Brazilian E-Commerce Public Dataset (Olist).
 
 📑 Sumário Executivo
 
-Este projeto visa a implementação de uma plataforma de dados ponta a ponta utilizando a Dadosfera. 
+Este projeto visa a implementação de uma plataforma de dados ponta a ponta utilizando a Dadosfera, entregando análises descritivas e prescritivas com agilidade e menor custo em todas as áreas da empresa.
 
 O foco é transformar dados brutos de e-commerce em ativos de inteligência de negócio, utilizando modelagem dimensional e enriquecimento via Inteligência Artificial (GenAI).
 
@@ -28,6 +28,8 @@ O foco é transformar dados brutos de e-commerce em ativos de inteligência de n
 Observação Técnica: Para garantir a máxima integridade e eficiência no carregamento de dados, optei por realizar os itens 4 (Data Quality) e 5 (Enriquecimento GenAI) previamente à etapa de 2 (Integração).
 
 Motivação: Tratar os dados em Python e enriquecê-los com LLM antes da ingestão permite que o Data Lakehouse receba arquivos otimizados em .parquet, reduzindo custos de armazenamento, evitando processamento de dados nulos e garantindo que o Catálogo de Dados (Item 3) já nasça com as features de inteligência artificial integradas.
+
+Narrativa de Negócio: O projeto simula a fase pós-kickoff de uma implementação real para uma grande empresa de e-commerce.
 
 
 📋 Itens do Case
