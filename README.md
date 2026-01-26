@@ -69,7 +69,13 @@ Escolha de uma base real de e-commerce com mais de 100k registros para garantir 
 ![Dataset](img/dataset_kaggle.png)
 *Legenda: Dataset Olist selecionado pela sua complexidade relacional e volume de dados (+100k pedidos).*
 
-**4. Processamento de Dados & Data Quality (Antecipado)**
+**2. Integração (Módulo Integrar)**
+
+Os dados foram ingeridos na plataforma Dadosfera utilizando o módulo Integrar, onde foram criados pipelines de upload para arquivos Parquet, garantindo a integridade dos tipos de dados e a documentação inicial dos metadados.
+
+• [INSIRA O PRINT]
+
+**4. Processamento de Dados & Data Quality**
 
 Aplicação de limpeza, tratamento de tipos e testes de qualidade via Python (Notebook anexo).
 
@@ -83,7 +89,7 @@ Verificação de Data Quality após correção:
 ![Processamento e Data Quality](img/teste_qualidade_dados_silver_pedidos.png)
 *Legenda: Nova auditoria de dados via Python(Pandera) corrigindo as falhas de integridade encontrada nos dados.*
 
-**5. Inteligência de Dados(GenAI) (Antecipado)**
+**5. Inteligência de Dados(GenAI)**
 
 Enriquecimento da base original utilizando modelos de linguagem para categorização inteligente.
 
@@ -92,15 +98,8 @@ Enriquecimento da base original utilizando modelos de linguagem para categoriza�
 ![Inteligência de Dados(GenAI)](img/enriquecimento_dados_genai.png)
 *Legenda: Extração de atributos de produtos via LLM para maior granularidade na análise de vendas.*
 
-# 🚧 Etapas em Desenvolvimento (Aguardando Ingestão)
+# 🚧 Etapas em Desenvolvimento
 
-**2. Integração (Módulo Integrar)**
-
-        Status: Em progresso (Aguardando carga dos arquivos .parquet otimizados).
-
-        Nesta etapa, realizarei a configuração do pipeline de coleta para mover os dados tratados do ambiente local para a camada Standardized da Dadosfera.
-
-        • [INSIRA O PRINT]
 
 **3. Catalogação (Módulo Explorar)**
 
