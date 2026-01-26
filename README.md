@@ -18,9 +18,9 @@ link: https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
 
     Data Platform: Dadosfera (Coleta, Explorar, Analisar)
 
-    Linguagens: Python (Tratamento e Quality), SQL (Modelagem Star Schema)
+    Linguagens: Python(Processamento e Tratamento via Pandas, e Quality via Pandera), SQL(Modelagem Star Schema)
 
-    IA: LLM para enriquecimento de dados (GenAI)
+    IA: LLM para enriquecimento de dados(GenAI via API do Gemini)
 
     Visualização: Metabase & Streamlit
 
@@ -55,33 +55,40 @@ Narrativa de Negócio: O projeto simula a fase pós-kickoff de uma implementaç�
 
 0. Planejamento e Metodologia Ágil
 
-        Organização do projeto utilizando Kanban para gestão de tarefas e prazos.
+Organização do projeto utilizando Kanban para gestão de tarefas e prazos.
 
-        ![Planejamento Ágil](img/planejamento_trello.png)
-        • Legenda: Board Kanban estruturado para o ciclo de vida do projeto de Analytics Engineering.
+![Planejamento Ágil](img/planejamento_trello.png)
+• Legenda: Board Kanban estruturado para o ciclo de vida do projeto de Analytics Engineering.
 
 1. Seleção do Dataset
 
-        Escolha de uma base real de e-commerce com mais de 100k registros para garantir a escalabilidade da solução.
+Escolha de uma base real de e-commerce com mais de 100k registros para garantir a escalabilidade da solução.
 
-        • [INSIRA O PRINT DO KAGGLE OU DOS ARQUIVOS BAIXADOS AQUI]
-        • Legenda: Dataset Olist selecionado pela sua complexidade relacional e volume de dados (+100k pedidos).
+• [INSIRA O PRINT DO KAGGLE OU DOS ARQUIVOS BAIXADOS AQUI]
+• Legenda: Dataset Olist selecionado pela sua complexidade relacional e volume de dados (+100k pedidos).
 
 4. Processamento de Dados & Data Quality (Antecipado)
 
-        Aplicação de limpeza, tratamento de tipos e testes de qualidade via Python (Notebook anexo).
+Aplicação de limpeza, tratamento de tipos e testes de qualidade via Python (Notebook anexo).
 
-        • [INSIRA O PRINT DO RELATÓRIO DE QUALIDADE/CÓDIGO NO COLAB AQUI]
-        • Legenda: Auditoria de dados via Python identificando integridade de chaves primárias e tratamento de valores nulos.
+[Processamento e Data Quality](img/teste_qualidade_dados_brutos_clientes.png)
+[Processamento e Data Quality](img/teste_qualidade_dados_brutos_pedidos.png)
+[Processamento e Data Quality](img/teste_qualidade_dados_brutos_produtos.png)
+• Legenda: Auditoria de dados via Python(Pandera) identificando integridade de chaves primárias e tratamento de valores nulos.
 
-5. Inteligência de Dados (GenAI) (Antecipado)
+Verificação de Data Quality após correção:
 
-        Enriquecimento da base original utilizando modelos de linguagem para categorização inteligente.
+[Processamento e Data Quality](img/teste_qualidade_dados_silver_pedidos.png)
+• Legenda: Nova auditoria de dados via Python(Pandera) corrigindo as falhas de integridade encontrada nos dados.
 
-        Nota de Implementação (GenAI): Durante o enriquecimento, identifiquei respostas nulas da API devido aos filtros de segurança padrão (Safety Settings). Implementei um tratamento de exceções no pipeline Python para garantir a continuidade da ingestão, mapeando retornos inválidos temporariamente como 'Não Mapeado' para manter a integridade do schema no carregamento para a Dadosfera.
+5. Inteligência de Dados(GenAI) (Antecipado)
 
-        • [INSIRA O PRINT DO CÓDIGO DA API GENAI OU DO DATAFRAME COM A NOVA COLUNA AQUI]
-        • Legenda: Extração de atributos de produtos via LLM para maior granularidade na análise de vendas.
+Enriquecimento da base original utilizando modelos de linguagem para categorização inteligente.
+
+Nota de Implementação(GenAI via API do Gemini): Durante o enriquecimento, identifiquei respostas nulas da API devido aos filtros de segurança padrão(Safety Settings), onde implementei um tratamento de exceções no pipeline Python para garantir a continuidade da ingestão, mapeando retornos inválidos temporariamente como 'Não Mapeado' para manter a integridade do schema no carregamento para a Dadosfera.
+
+[Inteligência de Dados(GenAI)](img/enriquecimento_dados_genai.png)
+Legenda: Extração de atributos de produtos via LLM para maior granularidade na análise de vendas.
 
 # 🚧 Etapas em Desenvolvimento (Aguardando Ingestão)
 
