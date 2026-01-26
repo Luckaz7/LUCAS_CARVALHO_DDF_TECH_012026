@@ -5,14 +5,14 @@ Data: Janeiro de 2026.
 Dataset: Brazilian E-Commerce Public Dataset (Olist).
 
 
-📑 Sumário Executivo
+📑 # Sumário Executivo
 
-Este projeto visa a implementação de uma plataforma de dados ponta a ponta utilizando a Dadosfera, entregando análises descritivas e prescritivas com agilidade e menor custo em todas as áreas da empresa.
+Este projeto visa a implementação de uma plataforma de dados ponta a ponta utilizando a Dadosfera.
 
-O foco é transformar dados brutos de e-commerce em ativos de inteligência de negócio, utilizando modelagem dimensional e enriquecimento via Inteligência Artificial (GenAI).
+O foco é transformar dados brutos de e-commerce em ativos de inteligência de negócio, utilizando modelagem dimensional e enriquecimento via Inteligência Artificial(GenAI), entregando análises descritivas e prescritivas com agilidade e menor custo em todas as áreas da empresa.
 
 
-🛠️ Stack Utilizada:
+🛠️ # Stack Utilizada:
 
     Data Platform: Dadosfera (Coleta, Explorar, Analisar)
 
@@ -23,7 +23,7 @@ O foco é transformar dados brutos de e-commerce em ativos de inteligência de n
     Visualização: Metabase & Streamlit
 
 
-⚠️ Nota sobre a Metodologia de Execução
+⚠️ # Nota sobre a Metodologia de Execução
 
 Observação Técnica: Para garantir a máxima integridade e eficiência no carregamento de dados, optei por realizar os itens 4 (Data Quality) e 5 (Enriquecimento GenAI) previamente à etapa de 2 (Integração).
 
@@ -32,7 +32,7 @@ Motivação: Tratar os dados em Python e enriquecê-los com LLM antes da ingest�
 Narrativa de Negócio: O projeto simula a fase pós-kickoff de uma implementação real para uma grande empresa de e-commerce.
 
 
-📋 Itens do Case
+📋 # Itens do Case
 
 0. Planejamento e Metodologia Ágil
 
@@ -63,7 +63,7 @@ Enriquecimento da base original utilizando modelos de linguagem para categoriza�
 • Legenda: Extração de atributos de produtos via LLM para maior granularidade na análise de vendas.
 
 
-🚧 Etapas em Desenvolvimento (Aguardando Ingestão)
+🚧 # Etapas em Desenvolvimento (Aguardando Ingestão)
 
 2. Integração (Módulo Integrar)
 
@@ -90,7 +90,7 @@ Construção do Star Schema (Kimball) e criação de Dashboards executivos no Me
 • [INSIRA O PRINT]
 
 
-🎥 Apresentação do Case (Item 10)
+🎥 # Apresentação do Case (Item 10)
 
 Status: Planejado.
 
@@ -99,7 +99,7 @@ Link do vídeo com a proposta de valor e substituição da arquitetura legada pe
 • [INSIRA O PRINT]
 
 
-📂 Estrutura do Repositório
+📂 # Estrutura do Repositório
 
 • /notebooks: Contém o código de tratamento e GenAI.
 • /docs: Documentos de apoio e imagens.
