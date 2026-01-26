@@ -1,15 +1,18 @@
 # Case Técnico - Analytics Engineer @ Dadosfera
 
 Candidato: Lucas Carvalho Soares da Silva.
+
 Data: Janeiro de 2026.
+
 Dataset: Brazilian E-Commerce Public Dataset (Olist).
+
 link: https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
 
 # 📂 Estrutura do Repositório
 
-        • /notebooks: Contém o código de tratamento e GenAI.
-        • /img: prints.
-        • README.md: Documentação principal.
+• /notebooks: Contém o código de tratamento e GenAI.
+• /img: prints.
+• README.md: Documentação principal.
 
 # 🛠️ Stack Utilizada:
 
@@ -42,11 +45,11 @@ O foco é transformar dados brutos de e-commerce em ativos de inteligência de n
 
 # ⚠️ Nota sobre a Metodologia de Execução
 
-    Observação Técnica: Para garantir a máxima integridade e eficiência no carregamento de dados, optei por realizar os itens 4 (Data Quality) e 5 (Enriquecimento GenAI) previamente à etapa de 2 (Integração).
+Observação Técnica: Para garantir a máxima integridade e eficiência no carregamento de dados, optei por realizar os itens 4 (Data Quality) e 5 (Enriquecimento GenAI) previamente à etapa de 2 (Integração).
 
-    Motivação: Tratar os dados em Python e enriquecê-los com LLM antes da ingestão permite que o Data Lakehouse receba arquivos otimizados em .parquet, reduzindo custos de armazenamento, evitando processamento de dados nulos e garantindo que o Catálogo de Dados (Item 3) já nasça com as features de inteligência artificial integradas.
+Motivação: Tratar os dados em Python e enriquecê-los com LLM antes da ingestão permite que o Data Lakehouse receba arquivos otimizados em .parquet, reduzindo custos de armazenamento, evitando processamento de dados nulos e garantindo que o Catálogo de Dados (Item 3) já nasça com as features de inteligência artificial integradas.
 
-    Narrativa de Negócio: O projeto simula a fase pós-kickoff de uma implementação real para uma grande empresa de e-commerce.
+Narrativa de Negócio: O projeto simula a fase pós-kickoff de uma implementação real para uma grande empresa de e-commerce.
 
 # 📋 Itens do Case
 
@@ -54,7 +57,7 @@ O foco é transformar dados brutos de e-commerce em ativos de inteligência de n
 
         Organização do projeto utilizando Kanban para gestão de tarefas e prazos.
 
-        • [INSIRA O PRINT DO TRELLO AQUI]
+        ![Planejamento Ágil](img/Planejamento Case Técnico(Trello).png)
         • Legenda: Board Kanban estruturado para o ciclo de vida do projeto de Analytics Engineering.
 
 1. Seleção do Dataset
@@ -113,5 +116,3 @@ O foco é transformar dados brutos de e-commerce em ativos de inteligência de n
         Link do vídeo com a proposta de valor e substituição da arquitetura legada pela Dadosfera (em breve).
 
         • [INSIRA O PRINT]
-
-• [INSIRA O PRINT]
