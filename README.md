@@ -1,18 +1,20 @@
 # Case Técnico - Analytics Engineer @ Dadosfera
 
-Candidato: Lucas Carvalho Soares da Silva.
+**Candidato:** Lucas Carvalho Soares da Silva.
 
-Data: Janeiro de 2026.
+**Data:** Janeiro de 2026.
 
-Dataset: Brazilian E-Commerce Public Dataset (Olist).
+**Dataset:** Brazilian E-Commerce Public Dataset (Olist).
 
-link: https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
+**link:** https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
 
 # 📂 Estrutura do Repositório
 
-• /notebooks: Contém o código de tratamento e GenAI.
-• /img: prints.
-• README.md: Documentação principal.
+    • /notebooks: Contém o código de tratamento e GenAI.
+    
+    • /img: prints.
+    
+    • README.md: Documentação principal.
 
 # 🛠️ Stack Utilizada:
 
@@ -45,34 +47,34 @@ O foco é transformar dados brutos de e-commerce em ativos de inteligência de n
 
 # ⚠️ Nota sobre a Metodologia de Execução
 
-Observação Técnica: Para garantir a máxima integridade e eficiência no carregamento de dados, optei por realizar os itens 4 (Data Quality) e 5 (Enriquecimento GenAI) previamente à etapa de 2 (Integração).
+**Observação Técnica:** Para garantir a máxima integridade e eficiência no carregamento de dados, optei por realizar os itens 4 (Data Quality) e 5 (Enriquecimento GenAI) previamente à etapa de 2 (Integração).
 
-Motivação: Tratar os dados em Python e enriquecê-los com LLM antes da ingestão permite que o Data Lakehouse receba arquivos otimizados em .parquet, reduzindo custos de armazenamento, evitando processamento de dados nulos e garantindo que o Catálogo de Dados (Item 3) já nasça com as features de inteligência artificial integradas.
+**Motivação:** Tratar os dados em Python e enriquecê-los com LLM antes da ingestão permite que o Data Lakehouse receba arquivos otimizados em .parquet, reduzindo custos de armazenamento, evitando processamento de dados nulos e garantindo que o Catálogo de Dados (Item 3) já nasça com as features de inteligência artificial integradas.
 
-Narrativa de Negócio: O projeto simula a fase pós-kickoff de uma implementação real para uma grande empresa de e-commerce.
+**Narrativa de Negócio:** O projeto simula a fase pós-kickoff de uma implementação real para uma grande empresa de e-commerce.
 
 # 📋 Itens do Case
 
-0. Planejamento e Metodologia Ágil
+**0. Planejamento e Metodologia Ágil**
 
 Organização do projeto utilizando Kanban para gestão de tarefas e prazos.
 
 ![Planejamento Ágil](img/planejamento_trello.png)
-• Legenda: Board Kanban estruturado para o ciclo de vida do projeto de Analytics Engineering.
+Legenda: Board Kanban estruturado para o ciclo de vida do projeto de Analytics Engineering.
 
-1. Seleção do Dataset
+**1. Seleção do Dataset**
 
 Escolha de uma base real de e-commerce com mais de 100k registros para garantir a escalabilidade da solução.
 
 [INSIRA O PRINT DO KAGGLE OU DOS ARQUIVOS BAIXADOS AQUI]
 Legenda: Dataset Olist selecionado pela sua complexidade relacional e volume de dados (+100k pedidos).
 
-4. Processamento de Dados & Data Quality (Antecipado)
+**4. Processamento de Dados & Data Quality (Antecipado)**
 
 Aplicação de limpeza, tratamento de tipos e testes de qualidade via Python (Notebook anexo).
 
-![Processamento e Data Quality](img/teste_qualidade_dados_brutos_clientes.png)
 ![Processamento e Data Quality](img/teste_qualidade_dados_brutos_pedidos.png)
+![Processamento e Data Quality](img/teste_qualidade_dados_brutos_clientes.png)
 ![Processamento e Data Quality](img/teste_qualidade_dados_brutos_produtos.png)
 Legenda: Auditoria de dados via Python(Pandera) identificando integridade de chaves primárias e tratamento de valores nulos.
 
@@ -81,18 +83,18 @@ Verificação de Data Quality após correção:
 ![Processamento e Data Quality](img/teste_qualidade_dados_silver_pedidos.png)
 Legenda: Nova auditoria de dados via Python(Pandera) corrigindo as falhas de integridade encontrada nos dados.
 
-5. Inteligência de Dados(GenAI) (Antecipado)
+**5. Inteligência de Dados(GenAI) (Antecipado)**
 
 Enriquecimento da base original utilizando modelos de linguagem para categorização inteligente.
 
-Nota de Implementação(GenAI via API do Gemini): Durante o enriquecimento, identifiquei respostas nulas da API devido aos filtros de segurança padrão(Safety Settings), onde implementei um tratamento de exceções no pipeline Python para garantir a continuidade da ingestão, mapeando retornos inválidos temporariamente como 'Não Mapeado' para manter a integridade do schema no carregamento para a Dadosfera.
+**Nota de Implementação(GenAI via API do Gemini)**: Durante o enriquecimento, identifiquei respostas nulas da API devido aos filtros de segurança padrão(Safety Settings), onde implementei um tratamento de exceções no pipeline Python para garantir a continuidade da ingestão, mapeando retornos inválidos temporariamente como 'Não Mapeado' para manter a integridade do schema no carregamento para a Dadosfera.
 
 ![Inteligência de Dados(GenAI)](img/enriquecimento_dados_genai.png)
 Legenda: Extração de atributos de produtos via LLM para maior granularidade na análise de vendas.
 
 # 🚧 Etapas em Desenvolvimento (Aguardando Ingestão)
 
-2. Integração (Módulo Integrar)
+**2. Integração (Módulo Integrar)**
 
         Status: Em progresso (Aguardando carga dos arquivos .parquet otimizados).
 
@@ -100,7 +102,7 @@ Legenda: Extração de atributos de produtos via LLM para maior granularidade na
 
         • [INSIRA O PRINT]
 
-3. Catalogação (Módulo Explorar)
+**3. Catalogação (Módulo Explorar)**
 
         Status: Aguardando carga.
 
@@ -108,7 +110,7 @@ Legenda: Extração de atributos de produtos via LLM para maior granularidade na
 
         • [INSIRA O PRINT]
 
-6 e 7. Modelagem e Visualização (Módulo Analisar)
+**6 e 7. Modelagem e Visualização (Módulo Analisar)**
 
         Status: Planejado.
 
