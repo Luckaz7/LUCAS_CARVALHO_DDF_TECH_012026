@@ -64,22 +64,22 @@ Organização do projeto utilizando Kanban para gestão de tarefas e prazos.
 
 Escolha de uma base real de e-commerce com mais de 100k registros para garantir a escalabilidade da solução.
 
-• [INSIRA O PRINT DO KAGGLE OU DOS ARQUIVOS BAIXADOS AQUI]
-• Legenda: Dataset Olist selecionado pela sua complexidade relacional e volume de dados (+100k pedidos).
+[INSIRA O PRINT DO KAGGLE OU DOS ARQUIVOS BAIXADOS AQUI]
+Legenda: Dataset Olist selecionado pela sua complexidade relacional e volume de dados (+100k pedidos).
 
 4. Processamento de Dados & Data Quality (Antecipado)
 
 Aplicação de limpeza, tratamento de tipos e testes de qualidade via Python (Notebook anexo).
 
-[Processamento e Data Quality](img/teste_qualidade_dados_brutos_clientes.png)
-[Processamento e Data Quality](img/teste_qualidade_dados_brutos_pedidos.png)
-[Processamento e Data Quality](img/teste_qualidade_dados_brutos_produtos.png)
-• Legenda: Auditoria de dados via Python(Pandera) identificando integridade de chaves primárias e tratamento de valores nulos.
+![Processamento e Data Quality](img/teste_qualidade_dados_brutos_clientes.png)
+![Processamento e Data Quality](img/teste_qualidade_dados_brutos_pedidos.png)
+![Processamento e Data Quality](img/teste_qualidade_dados_brutos_produtos.png)
+Legenda: Auditoria de dados via Python(Pandera) identificando integridade de chaves primárias e tratamento de valores nulos.
 
 Verificação de Data Quality após correção:
 
-[Processamento e Data Quality](img/teste_qualidade_dados_silver_pedidos.png)
-• Legenda: Nova auditoria de dados via Python(Pandera) corrigindo as falhas de integridade encontrada nos dados.
+![Processamento e Data Quality](img/teste_qualidade_dados_silver_pedidos.png)
+Legenda: Nova auditoria de dados via Python(Pandera) corrigindo as falhas de integridade encontrada nos dados.
 
 5. Inteligência de Dados(GenAI) (Antecipado)
 
@@ -87,7 +87,7 @@ Enriquecimento da base original utilizando modelos de linguagem para categoriza�
 
 Nota de Implementação(GenAI via API do Gemini): Durante o enriquecimento, identifiquei respostas nulas da API devido aos filtros de segurança padrão(Safety Settings), onde implementei um tratamento de exceções no pipeline Python para garantir a continuidade da ingestão, mapeando retornos inválidos temporariamente como 'Não Mapeado' para manter a integridade do schema no carregamento para a Dadosfera.
 
-[Inteligência de Dados(GenAI)](img/enriquecimento_dados_genai.png)
+![Inteligência de Dados(GenAI)](img/enriquecimento_dados_genai.png)
 Legenda: Extração de atributos de produtos via LLM para maior granularidade na análise de vendas.
 
 # 🚧 Etapas em Desenvolvimento (Aguardando Ingestão)
