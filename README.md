@@ -74,6 +74,54 @@ Escolha de uma base real de e-commerce com mais de 100k registros para garantir 
 Os dados foram ingeridos na plataforma Dadosfera utilizando o módulo Integrar, onde foram criados pipelines de upload para arquivos Parquet, garantindo a integridade dos tipos de dados e a documentação inicial dos metadados.
 
 • [INSIRA O PRINT]
+*Legenda: egistro do pipeline de ingestão no módulo Integrar. A imagem confirma o sucesso no upload dos arquivos em formato .parquet, garantindo a preservação dos schemas e a otimização do armazenamento no Data Lakehouse.*
+
+**3. Catalogação (Módulo Explorar)**
+
+Após a integração, os dados foram registrados como ativos oficiais no módulo Explorar da Dadosfera. Esta etapa foi fundamental para garantir a transparência da linhagem dos dados e a documentação das regras de negócio aplicadas.
+
+Durante a etapa de catalogação no módulo Explorar, identifiquei que a coluna original PRODUCT_CATEGORY_NAME apresentava 610 valores nulos (conforme evidenciado nos indicadores de qualidade da plataforma). Para garantir a integridade analítica, documentei a estrutura das tabelas conforme abaixo:
+
+Tabela: tb_olist_products_enriched (Dimensão de Produtos)
+
+Esta tabela representa o maior ganho de governança do projeto, onde a Inteligência Artificial foi utilizada para tratar falhas de preenchimento da base original.
+
+    Destaque de Governança: A coluna original PRODUCT_CATEGORY_NAME apresentava 610 valores nulos.
+
+    Solução: Foi criada a coluna GENAI_CATEGORY via LLM (Gemini 1.5 Flash). Esta coluna possui 0% de nulos, garantindo que 100% dos produtos agora possuem uma categoria semântica válida para análise no Dashboard.
+    
+| Coluna | Descrição | Nota de Governança |
+| :--- | :--- | :--- |
+| `PRODUCT_ID` | Chave primária do produto | Identificador único. |
+| `PRODUCT_CATEGORY_NAME` |	Categoria original | Contém inconsistências e nulos. |
+| `GENAI_CATEGORY` | Categoria via IA |	Feature criada via LLM para normalizar a base e tratar os 610 nulos. |
+
+Nota: A documentação foi espelhada neste README para garantir a linhagem dos dados fora da camada de processamento.
+
+• [INSIRA O PRINT]
+*Legenda: Análise de integridade e completude de dados. O painel de Data Quality evidencia a eficácia da estratégia de IA: enquanto a categoria original apresenta lacunas (610 nulos), a coluna enriquecida via GenAI entrega 100% de preenchimento, eliminando o ruído analítico.*
+
+Tabela: tb_olist_orders_processed (Tabela Fato)
+
+Centraliza as métricas de performance logística calculadas durante a fase de engenharia.
+
+    Colunas Enriquecidas:
+
+        LEAD_TIME: Diferença em dias entre a compra e a entrega real.
+
+        DELIVERY_PERFORMANCE: Diferença entre a data prevista e a entrega real (atraso/antecipação).
+
+        SEASONALITY_FLAG: Classificação temporal dos pedidos (ex: Black Friday, Natal).
+
+• [INSIRA O PRINT]
+
+Tabela: tb_olist_customers (Dimensão de Clientes)
+
+    Uso: Fornece a granularidade geográfica necessária para o mapeamento de calor das vendas por estado e cidade.
+
+    Status de Qualidade: 100% de completude nos campos de localização.
+
+• [INSIRA O PRINT]
 
 **4. Processamento de Dados & Data Quality**
 
@@ -99,15 +147,6 @@ Enriquecimento da base original utilizando modelos de linguagem para categoriza�
 *Legenda: Extração de atributos de produtos via LLM para maior granularidade na análise de vendas.*
 
 # 🚧 Etapas em Desenvolvimento
-
-
-**3. Catalogação (Módulo Explorar)**
-
-        Status: Aguardando carga.
-
-        Criação do Dicionário de Dados e documentação dos ativos no catálogo da plataforma para garantir a governança.
-
-        • [INSIRA O PRINT]
 
 **6 e 7. Modelagem e Visualização (Módulo Analisar)**
 
