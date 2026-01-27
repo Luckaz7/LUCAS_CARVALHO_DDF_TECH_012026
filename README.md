@@ -243,6 +243,36 @@ Funcionalidade: O app permite filtrar produtos por categorias geradas pela IA ("
 ![Data App](img/data_app_streamlit.png) 
 *Legenda: Insights automáticos sobre o volume de produtos reclassificados*
 
+# 🖥️ **Como Executar o Data App Localmente**
+
+Caso deseje explorar o App de Similaridade de Produtos em sua máquina:
+
+    Pré-requisitos: Ter o Python 3.10+ instalado.
+
+    Clonar o repositório:
+        
+        git clone -b dev-final https://github.com/Luckaz7/LUCAS_CARVALHO_DDF_TECH_012026.git
+
+    Instalar dependências:
+
+        pip install streamlit pandas
+
+    Executar:
+
+        streamlit run app.py
+
+**O app abrirá automaticamente no seu navegador em http://localhost:8501.**
+
+# 🏁 **Conclusão**
+
+Este projeto demonstrou a viabilidade de transformar um ambiente de dados legado em uma estrutura moderna e ágil utilizando a Dadosfera.
+
+A principal entrega foi a transição de um modelo de dados bruto para um fluxo de inteligência enriquecido por IA Generativa(Google Gemini), permitindo uma classificação de produtos mais precisa e insights de logística em tempo real. 
+
+Os desafios técnicos enfrentados durante a implementação serviram para validar a flexibilidade da arquitetura proposta, utilizando soluções híbridas(WSL2 e Streamlit) para garantir a continuidade da entrega. 
+
+Como resultado, o cliente passa a ter uma visão 360º de sua operação, com dados governados, catalogados e prontos para escala.
+
 ### **10. Apresentação do Case**
 
     Status: Planejado.
