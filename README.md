@@ -233,14 +233,15 @@ Devido a restrições de conectividade entre o ambiente Sandbox da Dadosfera e o
 
 ### **9. Sobre Data Apps (Streamlit)**
 
-Desenvolvi um Data App utilizando Streamlit para permitir a exploração interativa dos produtos enriquecidos. 
-
-**Link:**
-
-O foco do App é a Análise de Similaridade: ao selecionar um produto, o algoritmo filtra itens da mesma categoria gerada pelo Gemini, facilitando estratégias de Cross-selling e Up-selling baseadas em dados semânticos.
+Solução: Como o módulo nativo da plataforma não estava liberado para este usuário, desenvolvi um Data App externo utilizando Streamlit e WSL2.
 
 [print]
-*Legenda:*
+*Legenda: Módulo inteligência inacessivel*
+
+Funcionalidade: O app permite filtrar produtos por categorias geradas pela IA ("Saúde", etc.) e exibe insights automáticos sobre o volume de produtos reclassificados, provando o valor do enriquecimento de dados. 
+
+[print]
+*Legenda: Insights automáticos sobre o volume de produtos reclassificados*
 
 ### **10. Apresentação do Case**
 
