@@ -231,16 +231,16 @@ Devido a restrições de conectividade entre o ambiente Sandbox da Dadosfera e o
 ![Pipeline](img/erro_conexao_db.png) 
 *Legenda: Erro de conexão com DB PostgreSQL via Render*
 
-### **9. Sobre Data Apps (Streamlit)**
+### **9. Data App(Streamlit)**
 
 Solução: Como o módulo nativo da plataforma não estava liberado para este usuário, desenvolvi um Data App externo utilizando Streamlit e WSL2.
 
-[print]
+![Data App](img/modulo_inteligencia.png) 
 *Legenda: Módulo inteligência inacessivel*
 
 Funcionalidade: O app permite filtrar produtos por categorias geradas pela IA ("Saúde", etc.) e exibe insights automáticos sobre o volume de produtos reclassificados, provando o valor do enriquecimento de dados. 
 
-[print]
+![Data App](img/data_app_streamlit.png) 
 *Legenda: Insights automáticos sobre o volume de produtos reclassificados*
 
 ### **10. Apresentação do Case**
