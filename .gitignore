@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv
+venv/
+ENV/
+
+# Streamlit
+.streamlit/
+static/
+
+# Environment / Secrets
+.env
+.flaskenv
+
+# OS Metadata (Windows/Mac)
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# OneDrive Temporary Files
+.~*
+*.tmp

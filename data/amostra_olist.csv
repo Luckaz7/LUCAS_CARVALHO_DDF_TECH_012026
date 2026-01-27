@@ -1,0 +1,101 @@
+product_id,product_category_name,product_name_lenght,product_description_lenght,product_photos_qty,product_weight_g,product_length_cm,product_height_cm,product_width_cm,genai_category
+1e9e8ef04dbcff4541ed26657ea517e5,perfumaria,40.0,287.0,1.0,225.0,16.0,10.0,14.0,Saúde
+3aa071139cb16b67ca9e5dea641aaa2f,artes,44.0,276.0,1.0,1000.0,30.0,18.0,20.0,Lazer
+96bd76ec8810374ed1b65e291975717f,esporte_lazer,46.0,250.0,1.0,154.0,18.0,9.0,15.0,Não mapeado
+cef67bcfe19066a932b7673e239eb23d,bebes,27.0,261.0,1.0,371.0,26.0,4.0,26.0,Não mapeado
+9dc1a7de274444849c219cff195d0b71,utilidades_domesticas,37.0,402.0,4.0,625.0,20.0,17.0,13.0,Casa
+41d3672d4792049fa1779bb35283ed13,instrumentos_musicais,60.0,745.0,1.0,200.0,38.0,5.0,11.0,Outros/Não Mapeado
+732bd381ad09e530fe0a5f457d81becb,cool_stuff,56.0,1272.0,4.0,18350.0,70.0,24.0,44.0,Outros/Não Mapeado
+2548af3e6e77a690cf3eb6368e9ab61e,moveis_decoracao,56.0,184.0,2.0,900.0,40.0,8.0,40.0,Outros/Não Mapeado
+37cc742be07708b53a98702e77a21a02,eletrodomesticos,57.0,163.0,1.0,400.0,27.0,13.0,17.0,Outros/Não Mapeado
+8c92109888e8cdf9d66dc7e463025574,brinquedos,36.0,1156.0,1.0,600.0,17.0,10.0,12.0,Outros/Não Mapeado
+14aa47b7fe5c25522b47b4b29c98dcb9,cama_mesa_banho,54.0,630.0,1.0,1100.0,16.0,10.0,16.0,Outros/Não Mapeado
+03b63c5fc16691530586ae020c345514,bebes,49.0,728.0,4.0,7150.0,50.0,19.0,45.0,Não mapeado
+cf55509ea8edaaac1d28fdb16e48fc22,instrumentos_musicais,43.0,1827.0,3.0,250.0,17.0,7.0,17.0,Outros/Não Mapeado
+7bb6f29c2be57716194f96496660c7c2,moveis_decoracao,51.0,2083.0,2.0,600.0,68.0,11.0,13.0,Outros/Não Mapeado
+eb31436580a610f202c859463d8c7415,construcao_ferramentas_seguranca,59.0,1602.0,4.0,200.0,17.0,7.0,17.0,Outros/Não Mapeado
+3bb7f144022e6732727d8d838a7b13b3,esporte_lazer,22.0,3021.0,1.0,800.0,16.0,2.0,11.0,Não mapeado
+6a2fb4dd53d2cdb88e0432f1284a004c,perfumaria,39.0,346.0,2.0,400.0,27.0,5.0,20.0,Saúde
+a1b71017a84f92fd8da4aeefba108a24,informatica_acessorios,59.0,636.0,1.0,900.0,40.0,15.0,20.0,Outros/Não Mapeado
+a0736b92e52f6cead290e30b578413b6,moveis_decoracao,56.0,296.0,2.0,1700.0,100.0,7.0,15.0,Outros/Não Mapeado
+f53103a77d9cf245e579ea37e5ec51f0,cama_mesa_banho,52.0,206.0,1.0,500.0,16.0,10.0,16.0,Outros/Não Mapeado
+1c1890ba1779090cd54008a3c3302921,moveis_decoracao,27.0,158.0,4.0,2550.0,29.0,24.0,45.0,Outros/Não Mapeado
+518ef5de2c2b3a255e326a4594ba15d9,cama_mesa_banho,27.0,329.0,2.0,800.0,36.0,8.0,16.0,Outros/Não Mapeado
+e3e020af31d4d89d2602272b315c3f6e,beleza_saude,58.0,1987.0,3.0,75.0,21.0,7.0,13.0,Outros/Não Mapeado
+8b41fbc2b984a12030090112324d1bc4,bebes,55.0,1627.0,1.0,500.0,20.0,13.0,13.0,Não mapeado
+d03bd02af9fff4b98f1c972315e5e9ef,moveis_decoracao,56.0,209.0,1.0,1800.0,40.0,10.0,30.0,Outros/Não Mapeado
+8ba4f2a4ae695d26e5626c1bf710975e,utilidades_domesticas,52.0,968.0,1.0,900.0,50.0,5.0,50.0,Casa
+f6574524b07d5bb753bab6f35abe2d06,malas_acessorios,52.0,573.0,5.0,3600.0,35.0,25.0,50.0,Outros/Não Mapeado
+c78b767da00efb70c1bcccab87c28cd5,informatica_acessorios,35.0,1101.0,2.0,300.0,42.0,2.0,30.0,Outros/Não Mapeado
+a0253d43394dd4da9a5d7b1f546f1a32,informatica_acessorios,59.0,1890.0,2.0,740.0,23.0,13.0,13.0,Outros/Não Mapeado
+051b9ff13dd55c0a6655a15ff296f80d,esporte_lazer,50.0,529.0,2.0,3600.0,62.0,23.0,23.0,Não mapeado
+47859fca9dd7485cbd93c3e8993bb74f,cama_mesa_banho,45.0,206.0,1.0,650.0,16.0,10.0,16.0,Outros/Não Mapeado
+e1d1d22e9f8122a4ec1533b032c12562,ferramentas_jardim,49.0,1163.0,9.0,2150.0,70.0,8.0,34.0,Outros/Não Mapeado
+20e37962088a4061d3578def47a8648b,moveis_decoracao,60.0,208.0,1.0,800.0,40.0,10.0,34.0,Outros/Não Mapeado
+1eba879220bd0981a0e2fbab499ed4e1,moveis_escritorio,57.0,476.0,1.0,8950.0,52.0,51.0,17.0,Outros/Não Mapeado
+ce5b91848b91118daffb3af53b747475,esporte_lazer,50.0,699.0,4.0,1388.0,34.0,9.0,31.0,Não mapeado
+5370b82a213393979691c98074265584,bebes,52.0,708.0,9.0,7950.0,33.0,30.0,44.0,Não mapeado
+b8dac5113b06a97e64943234522572b9,automotivo,43.0,1062.0,2.0,6000.0,87.0,3.0,42.0,Outros/Não Mapeado
+750cf819d127191920eda79a4b6fb479,eletronicos,31.0,806.0,1.0,263.0,18.0,12.0,16.0,Outros/Não Mapeado
+e6af694343b45b56304ad91974a110b9,utilidades_domesticas,37.0,352.0,1.0,3900.0,19.0,20.0,15.0,Casa
+680874c570dad71c0a2844cfbf417054,moveis_decoracao,47.0,502.0,1.0,600.0,25.0,25.0,25.0,Outros/Não Mapeado
+8b3a9476f74f5297f7ff0ec6d95fe1ea,moveis_decoracao,63.0,254.0,2.0,2050.0,49.0,13.0,41.0,Outros/Não Mapeado
+1c6fb703c624b381a20f21f757694866,brinquedos,33.0,471.0,2.0,725.0,22.0,17.0,15.0,Outros/Não Mapeado
+db46052aed7dff59ba38cf2fe29b87f9,cama_mesa_banho,56.0,509.0,4.0,6350.0,45.0,15.0,35.0,Outros/Não Mapeado
+b864b103180d5a6a3f830e67f93e8735,bebes,47.0,980.0,4.0,600.0,70.0,11.0,11.0,Não mapeado
+7a8dac4aaa16bc642e4df33adcf03303,cool_stuff,38.0,1701.0,2.0,11750.0,18.0,40.0,79.0,Outros/Não Mapeado
+83b9bc6aae6f527ff6aafb9e01d6cbf3,brinquedos,20.0,866.0,3.0,2550.0,22.0,32.0,38.0,Outros/Não Mapeado
+5f504b3a1c75b73d6151be81eb05bdc9,cool_stuff,38.0,1176.0,3.0,15350.0,47.0,40.0,47.0,Outros/Não Mapeado
+bbf920aa6ac72007a726e6f419156f8f,moveis_decoracao,42.0,303.0,2.0,1300.0,25.0,16.0,25.0,Outros/Não Mapeado
+c3b7e4d83e530c27a8e6368296aece48,moveis_decoracao,60.0,1972.0,2.0,850.0,69.0,11.0,11.0,Outros/Não Mapeado
+c5d8079278e912d7e3b6beb48ecb56e8,beleza_saude,60.0,330.0,1.0,1300.0,19.0,28.0,17.0,Outros/Não Mapeado
+5eaa343860dc445b3fd43d1b682809fd,esporte_lazer,53.0,3218.0,5.0,4800.0,60.0,30.0,15.0,Não mapeado
+b5cfb1d3c5e435a7a52227e08f220ee7,cool_stuff,55.0,410.0,2.0,1300.0,36.0,16.0,24.0,Outros/Não Mapeado
+334479e94cba98064050db1c9636e244,automotivo,57.0,311.0,1.0,220.0,18.0,14.0,17.0,Outros/Não Mapeado
+3fcd8dfe610c62edfb51de2630cd9ef4,bebes,50.0,509.0,4.0,5700.0,41.0,17.0,49.0,Não mapeado
+4c8056caed5757810b9a68b83c3759e6,malas_acessorios,53.0,1291.0,2.0,450.0,20.0,40.0,30.0,Outros/Não Mapeado
+30e77af9e7759bbaa0305d2fbc605dc4,fashion_calcados,60.0,402.0,2.0,2000.0,32.0,12.0,37.0,Outros/Não Mapeado
+92bf5d2084dfbcb57d9db7838bac5cd0,telefonia,51.0,427.0,2.0,100.0,19.0,3.0,11.0,Outros/Não Mapeado
+fdeb34a9f03fea7c3937dd62d1d0287e,cool_stuff,58.0,1252.0,1.0,1100.0,30.0,20.0,23.0,Outros/Não Mapeado
+1065dbb6b0bf03daaedab1236979e296,papelaria,49.0,488.0,3.0,1400.0,38.0,40.0,39.0,Outros/Não Mapeado
+0d826eba8e0a2ae3bca9e3a947dd756d,brinquedos,50.0,423.0,4.0,250.0,20.0,14.0,12.0,Outros/Não Mapeado
+f8f6fd145cc00519283cf3100477b2b3,esporte_lazer,47.0,956.0,1.0,1050.0,25.0,20.0,14.0,Não mapeado
+4e04ffb7dd3739ecfc37de8927dd586c,papelaria,59.0,144.0,1.0,500.0,24.0,7.0,16.0,Outros/Não Mapeado
+36555a2f528d7b2a255c504191445d39,beleza_saude,51.0,1069.0,1.0,1467.0,23.0,16.0,20.0,Outros/Não Mapeado
+22937a73f92a33040ab4e2540355a5d8,fashion_bolsas_e_acessorios,50.0,554.0,3.0,100.0,16.0,5.0,11.0,Outros/Não Mapeado
+dc21247da0290904ffbbcd5953c76f95,papelaria,41.0,92.0,1.0,100.0,16.0,5.0,16.0,Outros/Não Mapeado
+9020ce7adcc384b2899ae87ddc54767b,papelaria,43.0,198.0,2.0,300.0,23.0,7.0,15.0,Outros/Não Mapeado
+bfc1d1c62b1f7f401d8d9dda962bb870,esporte_lazer,50.0,255.0,2.0,950.0,60.0,15.0,15.0,Não mapeado
+6fef6d87bb6c2eb11d57a967209219a8,ferramentas_jardim,33.0,200.0,1.0,250.0,17.0,3.0,11.0,Outros/Não Mapeado
+1e5428c428e0f783acd6e3d94ba4ee2a,pcs,55.0,1067.0,1.0,12000.0,27.0,50.0,53.0,Outros/Não Mapeado
+94080f9219044d897195e2be145945dc,automotivo,60.0,1543.0,6.0,921.0,17.0,9.0,16.0,Outros/Não Mapeado
+d0389f20b3d11de54e1e4561df147683,casa_construcao,55.0,1441.0,1.0,10000.0,60.0,25.0,25.0,Outros/Não Mapeado
+3e9b58f1436820c248d3f98d7229bb14,relogios_presentes,56.0,489.0,2.0,250.0,16.0,11.0,11.0,Outros/Não Mapeado
+575c38b4c88fc7b35ef22fc8312bfe1b,cool_stuff,57.0,992.0,3.0,1200.0,44.0,20.0,20.0,Outros/Não Mapeado
+556702ebb73d3786a852ad3d5a8ad268,construcao_ferramentas_construcao,54.0,339.0,1.0,4800.0,25.0,8.0,25.0,Outros/Não Mapeado
+a3a03c131926ec14d4c9f3ef03016b24,pet_shop,54.0,463.0,1.0,700.0,40.0,20.0,20.0,Outros/Não Mapeado
+e586ebb6022265ae1eea38f46ffe3ead,beleza_saude,40.0,1469.0,3.0,1050.0,18.0,21.0,27.0,Outros/Não Mapeado
+278b3c6462e86b4556b99989513ddf73,eletroportateis,58.0,587.0,3.0,350.0,20.0,20.0,20.0,Outros/Não Mapeado
+0d009643171aee696f4733340bc2fdd0,perfumaria,52.0,150.0,1.0,422.0,21.0,16.0,18.0,Saúde
+be1be330cf34043d1c40d6114cbd11b5,relogios_presentes,51.0,484.0,1.0,317.0,19.0,13.0,16.0,Outros/Não Mapeado
+07f01b6fcacc1b187a71e5074199db2d,agro_industria_e_comercio,39.0,430.0,1.0,16400.0,63.0,66.0,56.0,Outros/Não Mapeado
+75b4372e69a42f8ae1d908c076f547b2,beleza_saude,22.0,1313.0,1.0,938.0,29.0,22.0,23.0,Outros/Não Mapeado
+3569d4374a919941a50f57371b1dc93d,beleza_saude,37.0,1168.0,1.0,2700.0,21.0,16.0,31.0,Outros/Não Mapeado
+a3c95dc653d9a279b160bc0179385ed1,cama_mesa_banho,39.0,1146.0,1.0,1750.0,30.0,18.0,30.0,Outros/Não Mapeado
+0992c6cba95a13bfa68ea7d5e22d478b,ferramentas_jardim,42.0,671.0,1.0,3850.0,29.0,12.0,24.0,Outros/Não Mapeado
+b1eae565a61935e0011ee7682fef9dc9,perfumaria,49.0,460.0,2.0,267.0,17.0,13.0,17.0,Saúde
+2734390ee304b0f4817b3c233094fc16,instrumentos_musicais,59.0,2367.0,3.0,16200.0,55.0,40.0,40.0,Outros/Não Mapeado
+32ee3f4e2493045726807808d7abbab6,cama_mesa_banho,54.0,381.0,2.0,1400.0,38.0,9.0,27.0,Outros/Não Mapeado
+c2367eda4f9623d0355dc5d7796d857a,cama_mesa_banho,50.0,607.0,1.0,6450.0,100.0,10.0,11.0,Outros/Não Mapeado
+7f34b85142d1ef9e077a0da9ada27385,moveis_decoracao,59.0,1750.0,3.0,2300.0,105.0,3.0,70.0,Outros/Não Mapeado
+c478b1bbf9ec8c5691f37ccb83187386,informatica_acessorios,55.0,163.0,2.0,300.0,25.0,8.0,18.0,Outros/Não Mapeado
+f9ecf420c38b90a8af8e7f70fd789264,esporte_lazer,43.0,101.0,1.0,600.0,50.0,10.0,12.0,Não mapeado
+3a6a0247ced9dcb444b46caafdcdd368,beleza_saude,60.0,2497.0,1.0,3600.0,20.0,20.0,20.0,Outros/Não Mapeado
+adf591c625cb265c12bc6749d3a2f757,beleza_saude,60.0,1146.0,6.0,150.0,20.0,24.0,33.0,Outros/Não Mapeado
+3e0f398b664b26e3224c79dbf435191f,esporte_lazer,57.0,900.0,4.0,400.0,16.0,4.0,11.0,Não mapeado
+64c8f1a52b407d92518a1f8b79240a70,telefonia,49.0,319.0,1.0,100.0,18.0,6.0,11.0,Outros/Não Mapeado
+af16005fca813272caf59c432153949e,moveis_decoracao,55.0,1186.0,2.0,800.0,53.0,8.0,20.0,Outros/Não Mapeado
+e6a1ff3552ba3305c1cf0a4dde50347f,automotivo,58.0,703.0,6.0,5250.0,47.0,19.0,23.0,Outros/Não Mapeado
+d8a405c732027a2af3187b031890933d,automotivo,50.0,361.0,1.0,200.0,35.0,4.0,26.0,Outros/Não Mapeado
+ce94e3c41145e28428cdae952a1fd7f2,relogios_presentes,58.0,899.0,2.0,335.0,17.0,11.0,12.0,Outros/Não Mapeado
+3f0f8de616df6efb39a48f3c64eea974,cama_mesa_banho,49.0,701.0,1.0,1300.0,50.0,12.0,12.0,Outros/Não Mapeado
