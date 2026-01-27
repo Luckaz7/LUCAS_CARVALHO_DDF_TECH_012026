@@ -59,6 +59,8 @@ O foco é transformar dados brutos de e-commerce em ativos de inteligência de n
 
 Organização do projeto utilizando Kanban para gestão de tarefas e prazos.
 
+**Link:** https://trello.com/invite/b/69764932449c1987ea2c18b9/ATTI3248d59ac8be331a71a0f6fa3e88fcf36E8F88A2/planejamento-case-tecnico-dadosfera
+
 ![Planejamento Ágil](img/planejamento_trello.png)
 *Legenda: Board Kanban estruturado para o ciclo de vida do projeto de Analytics Engineering.*
 
@@ -66,12 +68,16 @@ Organização do projeto utilizando Kanban para gestão de tarefas e prazos.
 
 Escolha de uma base real de e-commerce com mais de 100k registros para garantir a escalabilidade da solução.
 
+**link:** https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
+
 ![Dataset](img/dataset_kaggle.png)
 *Legenda: Dataset Olist selecionado pela sua complexidade relacional e volume de dados (+100k pedidos).*
 
 ## **2. Integração (Módulo Integrar)**
 
 Os dados foram ingeridos na plataforma Dadosfera utilizando o módulo Integrar, onde foram criados pipelines de upload para arquivos Parquet, garantindo a integridade dos tipos de dados e a documentação inicial dos metadados.
+
+**Link:** https://app.dadosfera.ai/pt-BR/collect/import-files
 
 ![Integração](img/importacao_tabelas_sucesso.png)
 *Legenda: Registro do pipeline de ingestão no módulo Integrar. A imagem confirma o sucesso no upload dos arquivos em formato .parquet, garantindo a preservação dos schemas e a otimização do armazenamento no Data Lakehouse.*
@@ -85,6 +91,8 @@ Durante a etapa de catalogação no módulo Explorar, identifiquei que a coluna 
 ### **Tabela: tb_olist_products_enriched (Dimensão de Produtos)**
 
 Esta tabela representa o maior ganho de governança do projeto, onde a Inteligência Artificial foi utilizada para tratar falhas de preenchimento da base original.
+
+**Link:** https://app.dadosfera.ai/pt-BR/catalog/data-assets/6a5f51c8-7099-459f-83c8-f8a3746af8f6
 
     Destaque de Governança: A coluna original PRODUCT_CATEGORY_NAME apresentava 610 valores nulos.
 
@@ -105,6 +113,8 @@ Nota: A documentação foi espelhada neste README para garantir a linhagem dos d
 
 Centraliza as métricas de performance logística calculadas durante a fase de engenharia.
 
+**Link:** https://app.dadosfera.ai/pt-BR/catalog/data-assets/c3fcdfa8-8129-4285-9d85-4fb8a4efd850
+
 Colunas Enriquecidas:
 
     LEAD_TIME: Diferença em dias entre a compra e a entrega real.
@@ -116,6 +126,8 @@ Colunas Enriquecidas:
 ![Tabela](img/tb_orders.png)
 
 ### **Tabela: tb_olist_customers (Dimensão de Clientes)**
+
+**Link:** https://app.dadosfera.ai/pt-BR/catalog/data-assets/1e1df43f-48d5-4723-938c-8da87b82f7d0
 
     Uso: Fornece a granularidade geográfica necessária para o mapeamento de calor das vendas por estado e cidade.
 
@@ -165,6 +177,8 @@ Performance: Devido à volumetria de dados (Big Data), as consultas foram otimiz
 
 Nota: Para a visualização dos dados, utilizei o Metabase integrado. Devido à alta volumetria do dataset Olist, optei por criar visualizações segmentadas por ativos de dados para garantir a melhor performance de resposta e estabilidade do dashboard(SLA de visualização).
 
+**Link:** https://metabase-treinamentos.dadosfera.ai/collection/1029-lucas-carvalho-case-tecnico-analytics-engineer
+
 ![Vizualização](img/coleção_analises.png)
 *Legenda: visualizações segmentadas por ativos de dados.*
 
@@ -181,6 +195,8 @@ A modelagem foi estruturada seguindo a metodologia Star Schema de Ralph Kimball,
     Relacionamentos: Foi estabelecida as chaves(Customer ID e Product ID) para criar o relacionamento 1:N, sendo uma definição clássica de Star Schema.
 
 ### **7.2 KPIs e Visualizações Criadas:**
+
+**Link Dashboard:** https://app.dadosfera.ai/pt-BR/catalog/data-assets/b13d7eac-521a-4a83-a6b2-9c9a094d28c2
 
     Distribuição de Categorias via IA(Gráfico de Rosca): Demonstra o sucesso do enriquecimento de dados com Gemini, categorizando 32.951 produtos.
 
