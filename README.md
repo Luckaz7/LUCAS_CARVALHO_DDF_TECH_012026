@@ -225,8 +225,11 @@ Devido a restrições de conectividade entre o ambiente Sandbox da Dadosfera e o
 
     Orquestração de IA: Integração de um step de micro-transformação para consumo do modelo Gemini, automatizando a categorização de produtos.
 
-[print] 
-*Legenda:*
+![Pipeline](img/bloqueio_acesso_google.png) 
+*Legenda: Acesso bloqueado para conexão com a fonte de dados no Google Cloud Storage*
+
+![Pipeline](img/erro_conexao_db.png) 
+*Legenda: Erro de conexão com DB PostgreSQL via Render*
 
 ### **9. Sobre Data Apps (Streamlit)**
 
