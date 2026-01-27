@@ -215,7 +215,35 @@ A modelagem foi estruturada seguindo a metodologia Star Schema de Ralph Kimball,
 ![Vizualização](img/dashboard_final.png) 
 *Legenda: Dashboard Final em Dark Mode apresentando os insights de negócio e engenharia de dados.*
 
-# 🎥 Apresentação do Case
+### **8. Pipelines de Dados e Orquestração**
+
+Desenvolvi um pipeline robusto utilizando o módulo de inteligência da Dadosfera, focado em garantir a integridade e a escalabilidade do projeto.
+
+**Link:**
+
+    Extração e Ingestão: Fluxo configurado para capturar dados de fontes transacionais, garantindo o sincronismo da base de pedidos.
+
+    Transformação e Qualidade (Data Quality): Implementação de steps de micro-transformações que realizam a limpeza de valores nulos, normalização de tipos de dados e o cálculo dinâmico do LEAD_TIME.
+
+    Pipeline de Machine Learning / IA: O diferencial estratégico deste pipeline é a integração de um nó de processamento que consome a API do Gemini, automatizando a categorização de produtos com base em descrições textuais, eliminando lacunas de informação no catálogo original.
+
+    Catalogação: O pipeline foi devidamente catalogado no dicionário de dados, permitindo a linhagem completa do dado (Data Lineage).
+
+[print] 
+*Legenda:*
+
+### **9. Sobre Data Apps (Streamlit)**
+
+Desenvolvi um Data App utilizando Streamlit para permitir a exploração interativa dos produtos enriquecidos. 
+
+**Link:**
+
+O foco do App é a Análise de Similaridade: ao selecionar um produto, o algoritmo filtra itens da mesma categoria gerada pelo Gemini, facilitando estratégias de Cross-selling e Up-selling baseadas em dados semânticos.
+
+[print]
+*Legenda:*
+
+### **10. Apresentação do Case**
 
     Status: Planejado.
 
