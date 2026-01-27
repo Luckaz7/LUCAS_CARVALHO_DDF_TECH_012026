@@ -165,24 +165,32 @@ Performance: Devido à volumetria de dados (Big Data), as consultas foram otimiz
 
 Nota: Para a visualização dos dados, utilizei o Metabase integrado. Devido à alta volumetria do dataset Olist, optei por criar visualizações segmentadas por ativos de dados para garantir a melhor performance de resposta e estabilidade do dashboard(SLA de visualização).
 
-O resultado final foi consolidado em um Dashboard Executivo com 6 visualizações dinâmicas, superando o requisito inicial do case e oferecendo uma visão 360º da operação.
+O resultado final foi consolidado em um Dashboard Executivo com 5 visualizações dinâmicas, oferecendo uma visão 360º da operação.
 
-### **KPIs e Visualizações Criadas:**
+### **7.1 Construção do Star Schema(Kimball)**
 
-        Distribuição de Categorias via IA (Gráfico de Rosca): Demonstra o sucesso do enriquecimento de dados com Gemini, categorizando 32.951 produtos.
+A modelagem foi estruturada seguindo a metodologia Star Schema de Ralph Kimball, onde defini a tabela de pedidos como a Fato, conectando-a às Dimensões de Clientes e Produtos, uma vez que essa arquitetura permite que as métricas de negócio(como volume de vendas e lead time) sejam filtradas por qualquer atributo das dimensões, como localização geográfica ou a nova categoria gerada por GenAI.
 
-        Distribuição de Status de Pedidos (Gráfico de Barras): Visão operacional da saúde das entregas, com destaque para 96.478 pedidos entregues.
+    Tabela Fato: TB_OLIST_ORDERS_PROCESSED como o centro da análise(o evento de negócio: o pedido);
 
-        Tendência de Vendas Mensal (Gráfico de Linha): Identificação de picos de demanda ao longo do tempo.
+    Tabelas Dimensão: Conecção da Tabela Fato às dimensões CUSTOMERS e PRODUCTS_ENRICHED(enriquecida por GenAI);
 
-        Top 10 Estados com mais Clientes (Gráfico de Barras): Inteligência geográfica revelando a dominância do estado de SP no volume de clientes.
+    Relacionamentos: Foi estabelecida as chaves(Customer ID e Product ID) para criar o relacionamento 1:N, sendo uma definição clássica de Star Schema.
 
-        Lead Time Médio por Status (Gráfico de Rosca): Métrica de eficiência logística processada no pipeline de dados.
+### **7.2 KPIs e Visualizações Criadas:**
+
+        Distribuição de Categorias via IA(Gráfico de Rosca): Demonstra o sucesso do enriquecimento de dados com Gemini, categorizando 32.951 produtos.
+
+        Distribuição de Status de Pedidos(Gráfico de Barras): Visão operacional da saúde das entregas, com destaque para 96.478 pedidos entregues.
+
+        Tendência de Vendas Mensal(Gráfico de Linha): Identificação de picos de demanda ao longo do tempo.
+
+        Top 10 Estados com mais Clientes(Gráfico de Barras): Inteligência geográfica revelando a dominância do estado de SP no volume de clientes.
+
+        Lead Time Médio por Status(Gráfico de Rosca): Métrica de eficiência logística processada no pipeline de dados.
 
 [INSERIR AQUI O PRINT {8E4F7BD2-F247-4502-96B1-7DF715FED7E7}.png] 
 *Legenda: Dashboard Final em Dark Mode apresentando os insights de negócio e engenharia de dados.*
-
-Construção do Star Schema (Kimball) e criação de Dashboards executivos no Metabase integrando as métricas de negócio.
 
 # 🎥 Apresentação do Case
 
