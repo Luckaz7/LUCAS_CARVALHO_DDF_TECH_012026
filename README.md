@@ -55,36 +55,44 @@ O foco é transformar dados brutos de e-commerce em ativos de inteligência de n
 
 # 📋 Itens do Case
 
-**0. Planejamento e Metodologia Ágil**
+## **0. Planejamento e Metodologia Ágil**
 
 Organização do projeto utilizando Kanban para gestão de tarefas e prazos.
+
+**Link:** https://trello.com/invite/b/69764932449c1987ea2c18b9/ATTI3248d59ac8be331a71a0f6fa3e88fcf36E8F88A2/planejamento-case-tecnico-dadosfera
 
 ![Planejamento Ágil](img/planejamento_trello.png)
 *Legenda: Board Kanban estruturado para o ciclo de vida do projeto de Analytics Engineering.*
 
-**1. Seleção do Dataset**
+## **1. Seleção do Dataset**
 
 Escolha de uma base real de e-commerce com mais de 100k registros para garantir a escalabilidade da solução.
+
+**link:** https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
 
 ![Dataset](img/dataset_kaggle.png)
 *Legenda: Dataset Olist selecionado pela sua complexidade relacional e volume de dados (+100k pedidos).*
 
-**2. Integração (Módulo Integrar)**
+## **2. Integração (Módulo Integrar)**
 
 Os dados foram ingeridos na plataforma Dadosfera utilizando o módulo Integrar, onde foram criados pipelines de upload para arquivos Parquet, garantindo a integridade dos tipos de dados e a documentação inicial dos metadados.
 
-• [INSIRA O PRINT]
-*Legenda: egistro do pipeline de ingestão no módulo Integrar. A imagem confirma o sucesso no upload dos arquivos em formato .parquet, garantindo a preservação dos schemas e a otimização do armazenamento no Data Lakehouse.*
+**Link:** https://app.dadosfera.ai/pt-BR/collect/import-files
 
-**3. Catalogação (Módulo Explorar)**
+![Integração](img/importacao_tabelas_sucesso.png)
+*Legenda: Registro do pipeline de ingestão no módulo Integrar. A imagem confirma o sucesso no upload dos arquivos em formato .parquet, garantindo a preservação dos schemas e a otimização do armazenamento no Data Lakehouse.*
+
+## **3. Catalogação(Módulo Explorar)**
 
 Após a integração, os dados foram registrados como ativos oficiais no módulo Explorar da Dadosfera. Esta etapa foi fundamental para garantir a transparência da linhagem dos dados e a documentação das regras de negócio aplicadas.
 
 Durante a etapa de catalogação no módulo Explorar, identifiquei que a coluna original PRODUCT_CATEGORY_NAME apresentava 610 valores nulos (conforme evidenciado nos indicadores de qualidade da plataforma). Para garantir a integridade analítica, documentei a estrutura das tabelas conforme abaixo:
 
-Tabela: tb_olist_products_enriched (Dimensão de Produtos)
+### **Tabela: tb_olist_products_enriched (Dimensão de Produtos)**
 
 Esta tabela representa o maior ganho de governança do projeto, onde a Inteligência Artificial foi utilizada para tratar falhas de preenchimento da base original.
+
+**Link:** https://app.dadosfera.ai/pt-BR/catalog/data-assets/6a5f51c8-7099-459f-83c8-f8a3746af8f6
 
     Destaque de Governança: A coluna original PRODUCT_CATEGORY_NAME apresentava 610 valores nulos.
 
@@ -98,32 +106,36 @@ Esta tabela representa o maior ganho de governança do projeto, onde a Inteligê
 
 Nota: A documentação foi espelhada neste README para garantir a linhagem dos dados fora da camada de processamento.
 
-• [INSIRA O PRINT]
+![Catalogação](img/tabela_products_genai.png)
 *Legenda: Análise de integridade e completude de dados. O painel de Data Quality evidencia a eficácia da estratégia de IA: enquanto a categoria original apresenta lacunas (610 nulos), a coluna enriquecida via GenAI entrega 100% de preenchimento, eliminando o ruído analítico.*
 
-Tabela: tb_olist_orders_processed (Tabela Fato)
+### **Tabela: tb_olist_orders_processed (Tabela Fato)**
 
 Centraliza as métricas de performance logística calculadas durante a fase de engenharia.
 
-    Colunas Enriquecidas:
+**Link:** https://app.dadosfera.ai/pt-BR/catalog/data-assets/c3fcdfa8-8129-4285-9d85-4fb8a4efd850
 
-        LEAD_TIME: Diferença em dias entre a compra e a entrega real.
+Colunas Enriquecidas:
 
-        DELIVERY_PERFORMANCE: Diferença entre a data prevista e a entrega real (atraso/antecipação).
+    LEAD_TIME: Diferença em dias entre a compra e a entrega real.
 
-        SEASONALITY_FLAG: Classificação temporal dos pedidos (ex: Black Friday, Natal).
+    DELIVERY_PERFORMANCE: Diferença entre a data prevista e a entrega real (atraso/antecipação).
 
-• [INSIRA O PRINT]
+    SEASONALITY_FLAG: Classificação temporal dos pedidos (ex: Black Friday, Natal).
 
-Tabela: tb_olist_customers (Dimensão de Clientes)
+![Tabela](img/tb_orders.png)
+
+### **Tabela: tb_olist_customers (Dimensão de Clientes)**
+
+**Link:** https://app.dadosfera.ai/pt-BR/catalog/data-assets/1e1df43f-48d5-4723-938c-8da87b82f7d0
 
     Uso: Fornece a granularidade geográfica necessária para o mapeamento de calor das vendas por estado e cidade.
 
     Status de Qualidade: 100% de completude nos campos de localização.
 
-• [INSIRA O PRINT]
+![Tabela](img/tb_customers.png)
 
-**4. Processamento de Dados & Data Quality**
+## **4. Processamento de Dados & Data Quality**
 
 Aplicação de limpeza, tratamento de tipos e testes de qualidade via Python (Notebook anexo).
 
@@ -137,7 +149,7 @@ Verificação de Data Quality após correção:
 ![Processamento e Data Quality](img/teste_qualidade_dados_silver_pedidos.png)
 *Legenda: Nova auditoria de dados via Python(Pandera) corrigindo as falhas de integridade encontrada nos dados.*
 
-**5. Inteligência de Dados(GenAI)**
+## **5. Inteligência de Dados(GenAI)**
 
 Enriquecimento da base original utilizando modelos de linguagem para categorização inteligente.
 
@@ -146,20 +158,63 @@ Enriquecimento da base original utilizando modelos de linguagem para categoriza�
 ![Inteligência de Dados(GenAI)](img/enriquecimento_dados_genai.png)
 *Legenda: Extração de atributos de produtos via LLM para maior granularidade na análise de vendas.*
 
-# 🚧 Etapas em Desenvolvimento
+## **6. Modelagem**
 
-**6 e 7. Modelagem e Visualização (Módulo Analisar)**
+Para a estruturação dos dados, utilizei o Editor de Consultas Visual (No-Code) da plataforma, sendo fundamental para conectar a tabela fato de pedidos com as dimensões de clientes e produtos enriquecidos, criando uma camada semântica pronta para análise.
 
-        Status: Planejado.
+Ações Realizadas:
 
-        Construção do Star Schema (Kimball) e criação de Dashboards executivos no Metabase integrando as métricas de negócio.
+    Criação de junções (Left Joins) entre a tabela TB_OLIST_ORDERS_PROCESSED e TB_OLIST_CUSTOMERS utilizando a chave Customer ID.
 
-        • [INSIRA O PRINT]
+    Estabelecimento de relações para permitir o cruzamento de métricas geográficas com o status operacional dos pedidos.
+
+Performance: Devido à volumetria de dados (Big Data), as consultas foram otimizadas através de agregações diretas para garantir um tempo de resposta eficiente no Dashboard.
+
+![Modelagem](img/modelagem_relacional.png) 
+*Legenda: Configuração visual do Join entre a tabela fato de pedidos e a dimensão de clientes.*
+
+## **7. Visualização**
+
+Nota: Para a visualização dos dados, utilizei o Metabase integrado. Devido à alta volumetria do dataset Olist, optei por criar visualizações segmentadas por ativos de dados para garantir a melhor performance de resposta e estabilidade do dashboard(SLA de visualização).
+
+**Link:** https://metabase-treinamentos.dadosfera.ai/collection/1029-lucas-carvalho-case-tecnico-analytics-engineer
+
+![Vizualização](img/coleção_analises.png)
+*Legenda: visualizações segmentadas por ativos de dados.*
+
+O resultado final foi consolidado em um Dashboard Executivo com 5 visualizações dinâmicas, oferecendo uma visão 360º da operação.
+
+### **7.1 Construção do Star Schema(Kimball)**
+
+A modelagem foi estruturada seguindo a metodologia Star Schema de Ralph Kimball, onde defini a tabela de pedidos como a Fato, conectando-a às Dimensões de Clientes e Produtos, uma vez que essa arquitetura permite que as métricas de negócio(como volume de vendas e lead time) sejam filtradas por qualquer atributo das dimensões, como localização geográfica ou a nova categoria gerada por GenAI.
+
+    Tabela Fato: TB_OLIST_ORDERS_PROCESSED como o centro da análise(o evento de negócio: o pedido);
+
+    Tabelas Dimensão: Conecção da Tabela Fato às dimensões CUSTOMERS e PRODUCTS_ENRICHED(enriquecida por GenAI);
+
+    Relacionamentos: Foi estabelecida as chaves(Customer ID e Product ID) para criar o relacionamento 1:N, sendo uma definição clássica de Star Schema.
+
+### **7.2 KPIs e Visualizações Criadas:**
+
+**Link Dashboard:** https://app.dadosfera.ai/pt-BR/catalog/data-assets/b13d7eac-521a-4a83-a6b2-9c9a094d28c2
+
+    Distribuição de Categorias via IA(Gráfico de Rosca): Demonstra o sucesso do enriquecimento de dados com Gemini, categorizando 32.951 produtos.
+
+    Distribuição de Status de Pedidos(Gráfico de Barras): Visão operacional da saúde das entregas, com destaque para 96.478 pedidos entregues.
+
+    Tendência de Vendas Mensal(Gráfico de Linha): Identificação de picos de demanda ao longo do tempo.
+
+    Top 10 Estados com mais Clientes(Gráfico de Barras): Inteligência geográfica revelando a dominância do estado de SP no volume de clientes.
+
+    Lead Time Médio por Status(Gráfico de Rosca): Métrica de eficiência logística processada no pipeline de dados.
+
+![Vizualização](img/dashboard_final.png) 
+*Legenda: Dashboard Final em Dark Mode apresentando os insights de negócio e engenharia de dados.*
 
 # 🎥 Apresentação do Case
 
-        Status: Planejado.
+    Status: Planejado.
 
-        Link do vídeo com a proposta de valor e substituição da arquitetura legada pela Dadosfera (em breve).
+    Link do vídeo com a proposta de valor e substituição da arquitetura legada pela Dadosfera (em breve).
 
-        • [INSIRA O PRINT]
+    • [INSIRA O PRINT]
