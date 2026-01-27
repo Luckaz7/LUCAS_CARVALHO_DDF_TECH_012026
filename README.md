@@ -217,17 +217,13 @@ A modelagem foi estruturada seguindo a metodologia Star Schema de Ralph Kimball,
 
 ### **8. Pipelines de Dados e Orquestração**
 
-Desenvolvi um pipeline robusto utilizando o módulo de inteligência da Dadosfera, focado em garantir a integridade e a escalabilidade do projeto.
+Devido a restrições de conectividade entre o ambiente Sandbox da Dadosfera e os provedores Cloud(Google/Render) via protocolos de rede, a etapa de Pipeline foi documentada através de sua Arquitetura Lógica, garantindo a entrega do projeto conforme os requisitos:
 
-**Link:**
+    Modelagem de Ingestão: Projetei o pipeline para conexão via PostgreSQL (Supabase), estruturando a extração dos dados transacionais da Olist.
 
-    Extração e Ingestão: Fluxo configurado para capturar dados de fontes transacionais, garantindo o sincronismo da base de pedidos.
+    Pipeline de Transformação (ETL): O fluxo foi desenhado para realizar o saneamento em Python e o cálculo de métricas de logística (LEAD_TIME).
 
-    Transformação e Qualidade (Data Quality): Implementação de steps de micro-transformações que realizam a limpeza de valores nulos, normalização de tipos de dados e o cálculo dinâmico do LEAD_TIME.
-
-    Pipeline de Machine Learning / IA: O diferencial estratégico deste pipeline é a integração de um nó de processamento que consome a API do Gemini, automatizando a categorização de produtos com base em descrições textuais, eliminando lacunas de informação no catálogo original.
-
-    Catalogação: O pipeline foi devidamente catalogado no dicionário de dados, permitindo a linhagem completa do dado (Data Lineage).
+    Orquestração de IA: Integração de um step de micro-transformação para consumo do modelo Gemini, automatizando a categorização de produtos.
 
 [print] 
 *Legenda:*
