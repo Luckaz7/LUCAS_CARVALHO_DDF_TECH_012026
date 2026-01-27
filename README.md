@@ -146,15 +146,43 @@ Enriquecimento da base original utilizando modelos de linguagem para categoriza�
 ![Inteligência de Dados(GenAI)](img/enriquecimento_dados_genai.png)
 *Legenda: Extração de atributos de produtos via LLM para maior granularidade na análise de vendas.*
 
-# 🚧 Etapas em Desenvolvimento
+## **6. Modelagem**
 
-## **6 e 7. Modelagem e Visualização (Módulo Analisar)**
+Para a estruturação dos dados, utilizei o Editor de Consultas Visual (No-Code) da plataforma, sendo fundamental para conectar a tabela fato de pedidos com as dimensões de clientes e produtos enriquecidos, criando uma camada semântica pronta para análise.
 
-        Status: Planejado.
+Ações Realizadas:
 
-        Construção do Star Schema (Kimball) e criação de Dashboards executivos no Metabase integrando as métricas de negócio.
+        Criação de junções (Left Joins) entre a tabela TB_OLIST_ORDERS_PROCESSED e TB_OLIST_CUSTOMERS utilizando a chave Customer ID.
 
-        • [INSIRA O PRINT]
+        Estabelecimento de relações para permitir o cruzamento de métricas geográficas com o status operacional dos pedidos.
+
+Performance: Devido à volumetria de dados (Big Data), as consultas foram otimizadas através de agregações diretas para garantir um tempo de resposta eficiente no Dashboard.
+
+[INSERIR AQUI O PRINT {5C969FA0-BAD5-431C-B3B4-434D90AAE3DC}.png] 
+*Legenda: Configuração visual do Join entre a tabela fato de pedidos e a dimensão de clientes.*
+
+## **7. Visualização**
+
+Nota: Para a visualização dos dados, utilizei o Metabase integrado. Devido à alta volumetria do dataset Olist, optei por criar visualizações segmentadas por ativos de dados para garantir a melhor performance de resposta e estabilidade do dashboard(SLA de visualização).
+
+O resultado final foi consolidado em um Dashboard Executivo com 6 visualizações dinâmicas, superando o requisito inicial do case e oferecendo uma visão 360º da operação.
+
+### **KPIs e Visualizações Criadas:**
+
+        Distribuição de Categorias via IA (Gráfico de Rosca): Demonstra o sucesso do enriquecimento de dados com Gemini, categorizando 32.951 produtos.
+
+        Distribuição de Status de Pedidos (Gráfico de Barras): Visão operacional da saúde das entregas, com destaque para 96.478 pedidos entregues.
+
+        Tendência de Vendas Mensal (Gráfico de Linha): Identificação de picos de demanda ao longo do tempo.
+
+        Top 10 Estados com mais Clientes (Gráfico de Barras): Inteligência geográfica revelando a dominância do estado de SP no volume de clientes.
+
+        Lead Time Médio por Status (Gráfico de Rosca): Métrica de eficiência logística processada no pipeline de dados.
+
+[INSERIR AQUI O PRINT {8E4F7BD2-F247-4502-96B1-7DF715FED7E7}.png] 
+*Legenda: Dashboard Final em Dark Mode apresentando os insights de negócio e engenharia de dados.*
+
+Construção do Star Schema (Kimball) e criação de Dashboards executivos no Metabase integrando as métricas de negócio.
 
 # 🎥 Apresentação do Case
 
