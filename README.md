@@ -73,10 +73,10 @@ Escolha de uma base real de e-commerce com mais de 100k registros para garantir 
 
 Os dados foram ingeridos na plataforma Dadosfera utilizando o módulo Integrar, onde foram criados pipelines de upload para arquivos Parquet, garantindo a integridade dos tipos de dados e a documentação inicial dos metadados.
 
-![Dataset](img/importacao_tabelas_sucesso.png)
+![Integração](img/importacao_tabelas_sucesso.png)
 *Legenda: Registro do pipeline de ingestão no módulo Integrar. A imagem confirma o sucesso no upload dos arquivos em formato .parquet, garantindo a preservação dos schemas e a otimização do armazenamento no Data Lakehouse.*
 
-## **3. Catalogação (Módulo Explorar)**
+## **3. Catalogação(Módulo Explorar)**
 
 Após a integração, os dados foram registrados como ativos oficiais no módulo Explorar da Dadosfera. Esta etapa foi fundamental para garantir a transparência da linhagem dos dados e a documentação das regras de negócio aplicadas.
 
@@ -98,22 +98,22 @@ Esta tabela representa o maior ganho de governança do projeto, onde a Inteligê
 
 Nota: A documentação foi espelhada neste README para garantir a linhagem dos dados fora da camada de processamento.
 
-![Dataset](img/tabela_products_genai.png)
+![Catalogação](img/tabela_products_genai.png)
 *Legenda: Análise de integridade e completude de dados. O painel de Data Quality evidencia a eficácia da estratégia de IA: enquanto a categoria original apresenta lacunas (610 nulos), a coluna enriquecida via GenAI entrega 100% de preenchimento, eliminando o ruído analítico.*
 
 ### **Tabela: tb_olist_orders_processed (Tabela Fato)**
 
 Centraliza as métricas de performance logística calculadas durante a fase de engenharia.
 
-    Colunas Enriquecidas:
+Colunas Enriquecidas:
 
-        LEAD_TIME: Diferença em dias entre a compra e a entrega real.
+    LEAD_TIME: Diferença em dias entre a compra e a entrega real.
 
-        DELIVERY_PERFORMANCE: Diferença entre a data prevista e a entrega real (atraso/antecipação).
+    DELIVERY_PERFORMANCE: Diferença entre a data prevista e a entrega real (atraso/antecipação).
 
-        SEASONALITY_FLAG: Classificação temporal dos pedidos (ex: Black Friday, Natal).
+    SEASONALITY_FLAG: Classificação temporal dos pedidos (ex: Black Friday, Natal).
 
-![Dataset](img/tb_orders.png)
+![Tabela](img/tb_orders.png)
 
 ### **Tabela: tb_olist_customers (Dimensão de Clientes)**
 
@@ -121,7 +121,7 @@ Centraliza as métricas de performance logística calculadas durante a fase de e
 
     Status de Qualidade: 100% de completude nos campos de localização.
 
-![Dataset](img/tb_customers.png)
+![Tabela](img/tb_customers.png)
 
 ## **4. Processamento de Dados & Data Quality**
 
@@ -152,18 +152,21 @@ Para a estruturação dos dados, utilizei o Editor de Consultas Visual (No-Code)
 
 Ações Realizadas:
 
-        Criação de junções (Left Joins) entre a tabela TB_OLIST_ORDERS_PROCESSED e TB_OLIST_CUSTOMERS utilizando a chave Customer ID.
+    Criação de junções (Left Joins) entre a tabela TB_OLIST_ORDERS_PROCESSED e TB_OLIST_CUSTOMERS utilizando a chave Customer ID.
 
-        Estabelecimento de relações para permitir o cruzamento de métricas geográficas com o status operacional dos pedidos.
+    Estabelecimento de relações para permitir o cruzamento de métricas geográficas com o status operacional dos pedidos.
 
 Performance: Devido à volumetria de dados (Big Data), as consultas foram otimizadas através de agregações diretas para garantir um tempo de resposta eficiente no Dashboard.
 
-[INSERIR AQUI O PRINT {5C969FA0-BAD5-431C-B3B4-434D90AAE3DC}.png] 
+![Modelagem](img/modelagem_relacional.png) 
 *Legenda: Configuração visual do Join entre a tabela fato de pedidos e a dimensão de clientes.*
 
 ## **7. Visualização**
 
 Nota: Para a visualização dos dados, utilizei o Metabase integrado. Devido à alta volumetria do dataset Olist, optei por criar visualizações segmentadas por ativos de dados para garantir a melhor performance de resposta e estabilidade do dashboard(SLA de visualização).
+
+![Vizualização](img/coleção_analises.png)
+*Legenda: visualizações segmentadas por ativos de dados.*
 
 O resultado final foi consolidado em um Dashboard Executivo com 5 visualizações dinâmicas, oferecendo uma visão 360º da operação.
 
@@ -179,23 +182,23 @@ A modelagem foi estruturada seguindo a metodologia Star Schema de Ralph Kimball,
 
 ### **7.2 KPIs e Visualizações Criadas:**
 
-        Distribuição de Categorias via IA(Gráfico de Rosca): Demonstra o sucesso do enriquecimento de dados com Gemini, categorizando 32.951 produtos.
+    Distribuição de Categorias via IA(Gráfico de Rosca): Demonstra o sucesso do enriquecimento de dados com Gemini, categorizando 32.951 produtos.
 
-        Distribuição de Status de Pedidos(Gráfico de Barras): Visão operacional da saúde das entregas, com destaque para 96.478 pedidos entregues.
+    Distribuição de Status de Pedidos(Gráfico de Barras): Visão operacional da saúde das entregas, com destaque para 96.478 pedidos entregues.
 
-        Tendência de Vendas Mensal(Gráfico de Linha): Identificação de picos de demanda ao longo do tempo.
+    Tendência de Vendas Mensal(Gráfico de Linha): Identificação de picos de demanda ao longo do tempo.
 
-        Top 10 Estados com mais Clientes(Gráfico de Barras): Inteligência geográfica revelando a dominância do estado de SP no volume de clientes.
+    Top 10 Estados com mais Clientes(Gráfico de Barras): Inteligência geográfica revelando a dominância do estado de SP no volume de clientes.
 
-        Lead Time Médio por Status(Gráfico de Rosca): Métrica de eficiência logística processada no pipeline de dados.
+    Lead Time Médio por Status(Gráfico de Rosca): Métrica de eficiência logística processada no pipeline de dados.
 
-[INSERIR AQUI O PRINT {8E4F7BD2-F247-4502-96B1-7DF715FED7E7}.png] 
+![Vizualização](img/dashboard_final.png) 
 *Legenda: Dashboard Final em Dark Mode apresentando os insights de negócio e engenharia de dados.*
 
 # 🎥 Apresentação do Case
 
-        Status: Planejado.
+    Status: Planejado.
 
-        Link do vídeo com a proposta de valor e substituição da arquitetura legada pela Dadosfera (em breve).
+    Link do vídeo com a proposta de valor e substituição da arquitetura legada pela Dadosfera (em breve).
 
-        • [INSIRA O PRINT]
+    • [INSIRA O PRINT]
