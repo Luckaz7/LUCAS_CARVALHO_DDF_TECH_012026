@@ -137,7 +137,9 @@ Colunas Enriquecidas:
 
 ## **4. Processamento de Dados & Data Quality**
 
-Aplicação de limpeza, tratamento de tipos e testes de qualidade via Python (Notebook anexo).
+Aplicação de limpeza, tratamento de tipos e testes de qualidade via Python(Notebook anexo).
+
+**Link:** https://colab.research.google.com/github/Luckaz7/LUCAS_CARVALHO_DDF_TECH_012026/blob/main/notebooks/processamento_dados.ipynb
 
 ![Processamento e Data Quality](img/teste_qualidade_dados_brutos_pedidos.png)
 ![Processamento e Data Quality](img/teste_qualidade_dados_brutos_clientes.png)
@@ -152,6 +154,8 @@ Verificação de Data Quality após correção:
 ## **5. Inteligência de Dados(GenAI)**
 
 Enriquecimento da base original utilizando modelos de linguagem para categorização inteligente.
+
+**Link:** https://colab.research.google.com/github/Luckaz7/LUCAS_CARVALHO_DDF_TECH_012026/blob/main/notebooks/processamento_dados.ipynb
 
 **Nota de Implementação(GenAI via API do Gemini)**: Durante o enriquecimento, identifiquei respostas nulas da API devido aos filtros de segurança padrão(Safety Settings), onde implementei um tratamento de exceções no pipeline Python para garantir a continuidade da ingestão, mapeando retornos inválidos temporariamente como 'Não Mapeado' para manter a integridade do schema no carregamento para a Dadosfera.
 
