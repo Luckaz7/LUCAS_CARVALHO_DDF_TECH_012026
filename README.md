@@ -273,10 +273,52 @@ Caso deseje explorar o App de Similaridade de Produtos em sua máquina:
 
 ### **10. Apresentação do Case**
 
-![Apresentação](img/data_app_streamlit.png) 
-*Legenda: Insights automáticos sobre o volume de produtos reclassificados*
+**Resumo da Apresentação:**
 
-Link do vídeo com a proposta de valor e substituição da arquitetura legada pela Dadosfera.
+**De: Legado AWS (Complexo e Fragmentado)**
+
+    A estrutura anterior utilizava múltiplos serviços (Amazon RDS, S3, Kinesis, Lambda, Firehose e Redis), o que gerava alta latência, custos elevados de manutenção e silos de governança.
+
+**Para: Ecossistema Dadosfera(Unificado e Multi-Cloud)**
+
+Projetei um pipeline de dados moderno dividido em quatro estágios principais:
+
+    Ingestão(Collect): Substituímos o fluxo complexo do Kinesis por conectores gerenciados da Dadosfera. 
+    
+        O pipeline foi configurado para suportar Ingestão Multi-Cloud(AWS S3, Google Cloud Storage e Azure), permitindo que o cliente centralize dados de diferentes provedores.
+
+    Governança (Catalog): Aplicação de políticas de catálogo e linhagem de dados em tempo real, garantindo que cada etapa do processamento seja auditável.
+
+    Orquestração e Transformação (SQL Pipeline): Implementação da Arquitetura Medallion:
+
+        Bronze: Dados brutos ingeridos.
+
+        Silver: Dados limpos e enriquecidos.
+
+        Gold (Business Ready): Dados agregados e prontos para consumo.
+
+    Consumo (Data App): Disponibilização direta dos dados via API/SQL para o Dashboard em Streamlit, permitindo busca por similaridade e análise de produtos.
+
+🛠️ Tecnologias Utilizadas
+
+    Plataforma de Dados: Dadosfera(Módulos Collect, Catalog e Transform).
+
+    Visualização: Streamlit(Python) para o Data App.
+
+    Documentação Técnica: Confluence para o desenho da arquitetura de referência.
+
+    Bancos de Dados Simulados: PostgreSQL(RDS), GCS e S3.
+
+🚀 Valor Gerado para o Cliente
+
+A migração proposta demonstra uma redução drástica na complexidade operacional. 
+
+Ao centralizar o pipeline na Dadosfera, ganha-se agilidade para criar novas análises, reduz o custo de infraestrutura na AWS e democratiza o acesso aos dados com governança nativa.
+
+![Apresentação](img/apresentação_case.png) 
+*Legenda: Apresentação Case Técnico*
+
+Assista ao vídeo explicativo com a demonstração da plataforma e a defesa da arquitetura:
 
 **Link:** https://youtu.be/J8WN21B1_Uc
 
