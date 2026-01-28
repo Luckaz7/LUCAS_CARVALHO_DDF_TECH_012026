@@ -217,7 +217,18 @@ A modelagem foi estruturada seguindo a metodologia Star Schema de Ralph Kimball,
 
 ### **8. Pipelines de Dados e Orquestração**
 
-Devido a restrições de conectividade entre o ambiente Sandbox da Dadosfera e os provedores Cloud(Google/Render) via protocolos de rede, a etapa de Pipeline foi documentada através de sua Arquitetura Lógica, garantindo a entrega do projeto conforme os requisitos:
+A arquitetura projetada substitui o fluxo complexo de múltiplos serviços AWS por uma estrutura simplificada na plataforma Dadosfera.
+
+    Conectividade: Pipeline preparado para ingestão Multi-Cloud (AWS S3, Google Cloud Storage e Azure), eliminando silos de dados.
+
+    Orquestração: Implementação de arquitetura Medallion (Bronze/Silver/Gold) via SQL Transformations, garantindo que o dado chegue ao Streamlit com alta qualidade e baixa latência.
+
+    Eficiência: Redução de custos operacionais ao eliminar a necessidade de manutenção de clusters Redis e fluxos Kinesis, centralizando tudo em uma única ferramenta SaaS.
+
+![Pipeline](img/diagrama_pipeline.png)
+*Legenda: Diagra com a Arquitetura Lógica do Pipeline*
+
+**Observação:** Devido a restrições de conectividade entre o ambiente Sandbox da Dadosfera e os provedores Cloud(Google/Render) via protocolos de rede, a etapa de Pipeline foi documentada através de sua Arquitetura Lógica, garantindo a entrega do projeto conforme os requisitos:
 
     Modelagem de Ingestão: Projetei o pipeline para conexão via PostgreSQL (Supabase), estruturando a extração dos dados transacionais da Olist.
 
@@ -227,9 +238,6 @@ Devido a restrições de conectividade entre o ambiente Sandbox da Dadosfera e o
 
 ![Pipeline](img/bloqueio_acesso_google.png) 
 *Legenda: Acesso bloqueado para conexão com a fonte de dados no Google Cloud Storage*
-
-![Pipeline](img/erro_conexao_db.png) 
-*Legenda: Erro de conexão com DB PostgreSQL via Render*
 
 ### **9. Data App(Streamlit)**
 
@@ -263,6 +271,12 @@ Caso deseje explorar o App de Similaridade de Produtos em sua máquina:
 
 **O app abrirá automaticamente no seu navegador em http://localhost:8501.**
 
+### **10. Apresentação do Case**
+
+Link do vídeo com a proposta de valor e substituição da arquitetura legada pela Dadosfera.
+
+• [INSIRA O PRINT]
+
 # 🏁 **Conclusão**
 
 Este projeto demonstrou a viabilidade de transformar um ambiente de dados legado em uma estrutura moderna e ágil utilizando a Dadosfera.
@@ -272,11 +286,3 @@ A principal entrega foi a transição de um modelo de dados bruto para um fluxo 
 Os desafios técnicos enfrentados durante a implementação serviram para validar a flexibilidade da arquitetura proposta, utilizando soluções híbridas(WSL2 e Streamlit) para garantir a continuidade da entrega. 
 
 Como resultado, o cliente passa a ter uma visão 360º de sua operação, com dados governados, catalogados e prontos para escala.
-
-### **10. Apresentação do Case**
-
-    Status: Planejado.
-
-    Link do vídeo com a proposta de valor e substituição da arquitetura legada pela Dadosfera (em breve).
-
-    • [INSIRA O PRINT]
