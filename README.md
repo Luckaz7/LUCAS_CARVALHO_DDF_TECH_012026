@@ -215,7 +215,7 @@ A modelagem foi estruturada seguindo a metodologia Star Schema de Ralph Kimball,
 ![Vizualização](img/dashboard_final.png) 
 *Legenda: Dashboard Final em Dark Mode apresentando os insights de negócio e engenharia de dados.*
 
-### **8. Pipelines de Dados e Orquestração**
+## **8. Pipelines de Dados e Orquestração**
 
 A arquitetura projetada substitui o fluxo complexo de múltiplos serviços AWS por uma estrutura simplificada na plataforma Dadosfera.
 
@@ -239,7 +239,7 @@ A arquitetura projetada substitui o fluxo complexo de múltiplos serviços AWS p
 ![Pipeline](img/bloqueio_acesso_google.png) 
 *Legenda: Acesso bloqueado para conexão com a fonte de dados no Google Cloud Storage*
 
-### **9. Data App(Streamlit)**
+## **9. Data App(Streamlit)**
 
 Solução: Como o módulo nativo da plataforma não estava liberado para este usuário, desenvolvi um Data App externo utilizando Streamlit e WSL2.
 
@@ -251,7 +251,7 @@ Funcionalidade: O app permite filtrar produtos por categorias geradas pela IA ("
 ![Data App](img/data_app_streamlit.png) 
 *Legenda: Insights automáticos sobre o volume de produtos reclassificados*
 
-# 🖥️ **Como Executar o Data App Localmente**
+### 🖥️ **Como Executar o Data App Localmente**
 
 Caso deseje explorar o App de Similaridade de Produtos em sua máquina:
 
@@ -271,7 +271,7 @@ Caso deseje explorar o App de Similaridade de Produtos em sua máquina:
 
 **O app abrirá automaticamente no seu navegador em http://localhost:8501.**
 
-### **10. Apresentação do Case**
+## **10. Apresentação do Case**
 
 **Resumo da Apresentação:**
 
@@ -299,7 +299,7 @@ Projetei um pipeline de dados moderno dividido em quatro estágios principais:
 
     Consumo (Data App): Disponibilização direta dos dados via API/SQL para o Dashboard em Streamlit, permitindo busca por similaridade e análise de produtos.
 
-🛠️ Tecnologias Utilizadas
+🛠️ **Tecnologias Utilizadas**
 
     Plataforma de Dados: Dadosfera(Módulos Collect, Catalog e Transform).
 
@@ -309,7 +309,7 @@ Projetei um pipeline de dados moderno dividido em quatro estágios principais:
 
     Bancos de Dados Simulados: PostgreSQL(RDS), GCS e S3.
 
-🚀 Valor Gerado para o Cliente
+🚀 **Valor Gerado para o Cliente**
 
 A migração proposta demonstra uma redução drástica na complexidade operacional. 
 
@@ -318,7 +318,7 @@ Ao centralizar o pipeline na Dadosfera, ganha-se agilidade para criar novas aná
 ![Apresentação](img/apresentação_case.png) 
 *Legenda: Apresentação Case Técnico*
 
-Assista ao vídeo explicativo com a demonstração da plataforma e a defesa da arquitetura:
+Assista ao vídeo explicativo com a defesa da arquitetura:
 
 **Link:** https://youtu.be/J8WN21B1_Uc
 
