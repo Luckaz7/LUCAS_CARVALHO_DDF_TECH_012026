@@ -273,9 +273,12 @@ Caso deseje explorar o App de Similaridade de Produtos em sua máquina:
 
 ### **10. Apresentação do Case**
 
+![Apresentação](img/data_app_streamlit.png) 
+*Legenda: Insights automáticos sobre o volume de produtos reclassificados*
+
 Link do vídeo com a proposta de valor e substituição da arquitetura legada pela Dadosfera.
 
-• [INSIRA O PRINT]
+**Link:** https://youtu.be/J8WN21B1_Uc
 
 # 🏁 **Conclusão**
 
